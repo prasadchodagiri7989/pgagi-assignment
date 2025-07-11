@@ -7,16 +7,29 @@ import { fetchNewsByCategory } from '@/src/services/newsAPI'
 import ContentCard from '@/src/components/ContentCard'
 import NewsSkeletonCard from '@/src/components/NewsSkeletonCard'
 
+interface NewsArticle {
+  title: string;
+  description?: string;
+  url: string;
+  urlToImage?: string;
+  publishedAt?: string;
+  source?: {
+    id?: string | null;
+    name?: string;
+  };
+}
+
+
 const NewsRecommendations = () => {
   const { newsCategories } = useSelector((state: RootState) => state.userPrefs)
-  const [news, setNews] = useState<any[]>([])
+  const [news, setNews] = useState<NewsArticle[]>([])
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     const loadNews = async () => {
       setLoading(true)
       try {
-        let allArticles: any[] = []
+        let allArticles: NewsArticle[] = []
         for (const category of newsCategories) {
           const articles = await fetchNewsByCategory(category)
           allArticles = [...allArticles, ...articles]

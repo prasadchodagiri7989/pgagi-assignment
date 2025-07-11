@@ -13,9 +13,18 @@ const availableGenres = [
   'Musical', 'News', 'War', 'Adult', 'Game-Show', 'Western', 'Short', 'Film-Noir',
 ]
 
+interface Movie {
+  id: string;
+  primaryTitle: string;
+  primaryImage: string;
+  url: string;
+  startYear?: number;
+  averageRating?: number;
+}
+
 const MovieRecommendations = () => {
   const { movieCategories } = useSelector((state: RootState) => state.userPrefs)
-  const [movies, setMovies] = useState<any[]>([])
+  const [movies, setMovies] = useState<Movie[]>([])
   const [loading, setLoading] = useState(true)
   const isValidGenre = (genre: string) => availableGenres.includes(genre)
 
@@ -24,7 +33,7 @@ const MovieRecommendations = () => {
     const loadMovies = async () => {
   try {
     setLoading(true)
-    let allMovies: any[] = []
+    let allMovies: Movie[] = []
     for (const genre of movieCategories) {
       if (!isValidGenre(genre)) continue // Skip invalid ones
       const movieResults = await fetchMoviesBySearch(genre)
