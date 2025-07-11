@@ -14,8 +14,7 @@
     "next": "15.3.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-redux": "^9.2.0",
-    "redux-mock-store": "^1.5.5"
+    "react-redux": "^9.2.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -35,6 +34,7 @@
     "jest": "^30.0.4",
     "jest-environment-jsdom": "^30.0.4",
     "postcss": "^8.5.6",
+    "redux-mock-store": "^1.5.5",
     "tailwindcss": "^4.1.11",
     "ts-jest": "^29.4.0",
     "typescript": "^5"
