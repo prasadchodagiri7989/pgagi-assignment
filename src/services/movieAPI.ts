@@ -1,5 +1,5 @@
-const RAPIDAPI_HOST = 'imdb236.p.rapidapi.com'
-const RAPIDAPI_KEY = 'b5383b3dc8msh1444dab0d8a6121p1afec2jsn4b91ed4c9324'
+const RAPIDAPI_HOST = process.env.NEXT_PUBLIC_RAPIDAPI_HOST!
+const RAPIDAPI_KEY = process.env.NEXT_PUBLIC_RAPIDAPI_KEY!
 
 export const fetchMoviesBySearch = async (genre: string) => {
   const url = `https://${RAPIDAPI_HOST}/api/imdb/search?type=movie&genre=${genre}&rows=10&sortOrder=DESC&sortField=averageRating`
@@ -21,4 +21,3 @@ export const fetchMoviesBySearch = async (genre: string) => {
   const data = await response.json()
   return data.results || []
 }
-
