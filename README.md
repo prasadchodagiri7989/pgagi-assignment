@@ -50,8 +50,8 @@ personalized-dashboard/
 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/personalized-dashboard.git
-cd personalized-dashboard
+git clone https://github.com/prasadchodagiri7989/pgagi-assignment.git
+cd pgagi-assignment
 ```
 
 2. Install dependencies
@@ -65,9 +65,9 @@ npm install
 Create a `.env.local` file with your API keys:
 
 ```env
-NEWS_API_KEY=your_newsapi_key_here
-MOVIE_API_URL=https://your-movie-api-url
-MOVIE_API_KEY=your_movie_api_key
+NEXT_PUBLIC_NEWS_API_KEY=ae97b8e26c714d588fe20c2a8c7872da
+NEXT_PUBLIC_RAPIDAPI_HOST=imdb236.p.rapidapi.com
+NEXT_PUBLIC_RAPIDAPI_KEY=b5383b3dc8msh1444dab0d8a6121p1afec2jsn4b91ed4c9324
 ```
 
 4. Run the app
@@ -93,9 +93,6 @@ npm run test
 
 **Chodagiri Prasad**  
 Email: chodagiriprasad5@gmail.com  
-LinkedIn: [Your Profile](https://linkedin.com/in/your-link)  
-GitHub: [@yourusername](https://github.com/yourusername)
+LinkedIn: [https://www.linkedin.com/in/prasadchodagiri/](https://www.linkedin.com/in/prasadchodagiri/)  
+GitHub: [@prasadchodagiri7989](https://github.com/prasadchodagiri7989)
 
-## 📄 License
-
-This project is licensed under the MIT License.
